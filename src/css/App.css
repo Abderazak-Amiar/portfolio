@@ -14,6 +14,9 @@
   font-weight: bold;
   text-align: center;
 }
+.logoLink {
+  text-decoration: none;
+}
 .navbar-comp {
   display: flex;
   justify-content: space-between;
@@ -46,10 +49,6 @@
 }
 .hide {
   display: none;
-}
-.navbar-link-popover {
-  padding-block: 8px;
-  text-decoration: none;
 }
 .css-3bmhjh-MuiPaper-root-MuiPopover-paper {
   width: 100%;
