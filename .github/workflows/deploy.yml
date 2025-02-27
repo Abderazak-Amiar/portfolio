@@ -18,7 +18,7 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_PRIVATE_KEY  }}
           source: '.'
-          target: '/var/www/your-project/html'
+          target: '/var/www/abderazakamiar.com/html'
 
       - name: Executing remote command
         uses: appleboy/ssh-action@master
@@ -27,7 +27,7 @@ jobs:
           USERNAME: ${{ secrets.SSH_USER }}
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_PRIVATE_KEY  }}
-          script: cd /var/www/your-project/html &&
-                  npm ci &&
-                  npm run build &&
-                  service nginx restart
+          script: cd /var/www/abderazakamiar.com/html &&
+            npm ci &&
+            npm run build &&
+            service nginx restart

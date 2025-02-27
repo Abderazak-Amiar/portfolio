@@ -1,0 +1,13 @@
+.badge-list-style {
+  background:
+    linear-gradient(var(--base-white) 0 0) padding-box,
+    /*this is your grey background*/
+      linear-gradient(to right, var(--primary), var(--gradient1)) border-box;
+  color: var(--base-black);
+  padding: 10px;
+  border: 3px solid transparent;
+  border-radius: 29px;
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}

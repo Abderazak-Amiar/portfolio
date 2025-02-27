@@ -21,7 +21,19 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Alias */
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+      "@propsTypes/*": ["types/*"],
+      "@style/*": ["style/*"],
+      "@css/*": ["css/*"]
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "types": ["@types/jest"]
 }
