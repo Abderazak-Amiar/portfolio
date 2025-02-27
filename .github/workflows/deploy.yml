@@ -28,6 +28,6 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_PRIVATE_KEY  }}
           script: cd /var/www/abderazakamiar.com/html &&
-            npm ci &&
+           npm install --force &&
             npm run build &&
             service nginx restart
