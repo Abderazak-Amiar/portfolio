@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Abderazak-Amiar/portfolio/compare/v1.0.0...v1.0.1) (2025-02-27)
+
+
+### Bug Fixes
+
+* peer dependency conflict ([231d19c](https://github.com/Abderazak-Amiar/portfolio/commit/231d19c88e29e6ef99415c603a34ec785fda76f2))
+
 # 1.0.0 (2025-02-27)
 
 
