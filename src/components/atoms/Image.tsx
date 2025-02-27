@@ -1,13 +1,9 @@
 import { Box } from '@mui/material';
-import { ImageProfileStyle } from '../../style/image-style';
-type imagePropType = {
-  imageLink: string;
-  alt?: string;
-  width?: string;
-  height?: string;
-};
+import { imagePropType } from '@propsTypes/_.types';
+import { ImageProfileStyle } from '@style/image-style';
+
 function Image(props: Readonly<imagePropType>) {
-  const { imageLink, alt, width, height } = props;
+  const { imageLink, alt, width, height, style } = props;
   return (
     <Box sx={ImageProfileStyle}>
       <Box
@@ -16,6 +12,7 @@ function Image(props: Readonly<imagePropType>) {
         src={imageLink}
         width={width}
         height={height}
+        className={style}
       />
     </Box>
   );
