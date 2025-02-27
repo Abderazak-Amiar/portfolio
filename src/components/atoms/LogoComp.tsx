@@ -1,15 +1,12 @@
 import { Typography } from '@mui/material';
+import { logoPropType } from '@propsTypes/_.types';
 import { Link } from 'react-router-dom';
-type logoPropType = {
-  logoStyle: string;
-};
+
 function LogoComp(props: Readonly<logoPropType>) {
   const { logoStyle } = props;
   return (
-    <Link to="/" className='logoLink'>
-      <Typography variant="h5" className={logoStyle}>
-        A.Amiar
-      </Typography>
+    <Link to="/" className="logoLink">
+      <Typography className={logoStyle}>A.Amiar</Typography>
     </Link>
   );
 }

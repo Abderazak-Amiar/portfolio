@@ -38,6 +38,7 @@ export const BtnDownloadCvStyle = {
     lg: 'block',
     xl: 'block',
   },
+  fontSize: '16px',
 };
 export const HamburgerMenuIconStyle = {
   textAlign: 'end',
@@ -61,6 +62,7 @@ export const PopoverMenuStyle = {
     lg: 'none',
     xl: 'none',
   },
+  maxWidth: '100%',
 };
 export const PopoverGridLogoStyle = {
   display: 'flex',
@@ -75,4 +77,5 @@ export const PopoverGridLinkMenuStyle = {
 export const PopoverGridDownloadCvStyle = {
   textTransform: 'capitalize',
   width: '150px',
+  fontSize: '16px',
 };

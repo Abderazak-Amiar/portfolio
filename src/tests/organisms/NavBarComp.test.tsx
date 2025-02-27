@@ -1,18 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import NavBarComp from '../../components/organisms/NavBarComp';
+
+import '@testing-library/jest-dom';
+import NavBarComp from '@components/organisms/NavBarComp';
 
 describe('Render buttons correctly', () => {
-  test('Check if downlaod buttons in th documents', () => {
+  test('Check if download buttons in th documents', () => {
     render(
       <MemoryRouter>
         <NavBarComp />
       </MemoryRouter>,
     );
-    const btn_download_my_cv = screen.getAllByRole('button', {
+    const btn_download_my_cv = screen.getByRole('button', {
       name: 'Download My CV',
     });
-    expect(btn_download_my_cv).toBeInTheDocument;
+    expect(btn_download_my_cv).toBeInTheDocument();
   });
 });
 
@@ -26,7 +28,7 @@ describe('Render links correctly', () => {
     const logo_link = screen.getByRole('link', {
       name: 'A.Amiar',
     });
-    expect(logo_link).toBeInTheDocument;
+    expect(logo_link).toBeInTheDocument();
   });
 
   test('Check if ABOUT ME link in the navbar', () => {
@@ -36,9 +38,9 @@ describe('Render links correctly', () => {
       </MemoryRouter>,
     );
     const about_link = screen.getByRole('link', {
-      name: 'About Mee',
+      name: 'About Me',
     });
-    expect(about_link).toBeInTheDocument;
+    expect(about_link).toBeInTheDocument();
   });
 
   test('Check if EXPERIENCE link in the navbar', () => {
@@ -50,7 +52,7 @@ describe('Render links correctly', () => {
     const experience_link = screen.getByRole('link', {
       name: 'Experience',
     });
-    expect(experience_link).toBeInTheDocument;
+    expect(experience_link).toBeInTheDocument();
   });
 
   test('Check if PORTFOLIO link in the navbar', () => {
@@ -62,7 +64,7 @@ describe('Render links correctly', () => {
     const portfolio_link = screen.getByRole('link', {
       name: 'Portfolio',
     });
-    expect(portfolio_link).toBeInTheDocument;
+    expect(portfolio_link).toBeInTheDocument();
   });
 
   test('Check if TESTIMONIALS link in the navbar', () => {
@@ -74,7 +76,7 @@ describe('Render links correctly', () => {
     const testimonials_link = screen.getByRole('link', {
       name: 'Testimonials',
     });
-    expect(testimonials_link).toBeInTheDocument;
+    expect(testimonials_link).toBeInTheDocument();
   });
 
   test('Check if CONTACT link in the navbar', () => {
@@ -86,6 +88,6 @@ describe('Render links correctly', () => {
     const contact_link = screen.getByRole('link', {
       name: 'Contact',
     });
-    expect(contact_link).toBeInTheDocument;
+    expect(contact_link).toBeInTheDocument();
   });
 });

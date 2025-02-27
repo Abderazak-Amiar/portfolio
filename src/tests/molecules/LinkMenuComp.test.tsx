@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import LinkMenuComp from '../../components/molecules/LinkMenuComp';
-import { NAVBAR_MENU_LINKS } from '../../constants';
+
+import LinkMenuComp from '@components/molecules/LinkMenuComp';
+import { NAVBAR_MENU_LINKS } from '@constants/index';
 describe('Renders correctly', () => {
   test('Renders a list of navbar links', () => {
     render(

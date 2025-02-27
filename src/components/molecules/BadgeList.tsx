@@ -1,8 +1,8 @@
+import Badge from '@components/atoms/Badge';
+import { SKILLS } from '@constants/index';
 import { Box } from '@mui/material';
-import { SKILLS } from '../../constants';
-import '../../css/skills-badge-style.css';
-import { badgeListStyle } from '../../style/badge-list-style';
-import Badge from '../atoms/Badge';
+import { badgeListStyle } from '@style/badge-list-style';
+
 function BadgeList() {
   return (
     <Box sx={badgeListStyle}>
@@ -11,7 +11,7 @@ function BadgeList() {
           key={item.id}
           icon={item.icon}
           skill={item.skill}
-          style="skillBadgeStyle"
+          style="badge-list-style"
         />
       ))}
     </Box>

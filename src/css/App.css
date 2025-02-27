@@ -1,5 +1,14 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+html,
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .navbar-link {
   text-decoration: none;
+  font-size: 18px;
 }
 .navbar-menu-link {
   display: flex;
@@ -9,10 +18,12 @@
 .navbar-link-popover {
   padding-block: 8px;
   text-decoration: none;
+  font-size: 16px;
 }
 .logo {
   font-weight: bold;
   text-align: center;
+  font-size: 30px !important;
 }
 .logoLink {
   text-decoration: none;
@@ -31,25 +42,22 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #272837;
+  color: var(--base-black);
   width: 100%;
   min-width: 340px;
 }
 #btn-download-cv {
   padding-block: 8px;
-  border: solid 1px #272837;
+  border: solid 1px var(--base-black);
   border-radius: 40px;
 }
 .navbar-hamburger-menu-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: var(--base-white);
   width: 99%;
 }
 .hide {
   display: none;
-}
-.css-3bmhjh-MuiPaper-root-MuiPopover-paper {
-  width: 100%;
 }

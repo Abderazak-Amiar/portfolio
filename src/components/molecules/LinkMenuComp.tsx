@@ -1,5 +1,6 @@
+import LinkComp from '@components/atoms/LinkComp';
 import { Box } from '@mui/material';
-import LinkComp from '../atoms/LinkComp';
+
 type linkMenuCompPropType = {
   menuLinksText: Array<string>;
   linkStyle?: string;
@@ -8,7 +9,7 @@ type linkMenuCompPropType = {
 function LinkMenuComp(props: Readonly<linkMenuCompPropType>) {
   const { menuLinksText, linkStyle, linkMenuStyle } = props;
   return (
-    <Box className={linkMenuStyle}>
+    <Box data-testid="navbar-links-container" className={linkMenuStyle}>
       {menuLinksText?.map((link) => {
         return (
           <LinkComp key={link} text={link} link="#" linkStyle={linkStyle} />

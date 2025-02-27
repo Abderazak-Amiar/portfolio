@@ -1,10 +1,9 @@
-import LinkMenuComp from '../molecules/LinkMenuComp';
-import { NAVBAR_MENU_LINKS } from '../../constants';
-import LogoComp from '../atoms/LogoComp.tsx';
-import { Box, Button, Grid, IconButton, Popover, Slide } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import LogoComp from '@components/atoms/LogoComp';
+import LinkMenuComp from '@components/molecules/LinkMenuComp';
+import { NAVBAR_MENU_LINKS } from '@constants/index';
 import CloseIcon from '@mui/icons-material/Close';
-import { useEffect, useRef, useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Button, Grid, IconButton, Popover, Slide } from '@mui/material';
 import {
   BtnDownloadCvStyle,
   GridDownloadCvStyle,
@@ -15,7 +14,8 @@ import {
   PopoverGridLinkMenuStyle,
   PopoverGridLogoStyle,
   PopoverMenuStyle,
-} from '../../style/navbar-style.ts';
+} from '@style/navbar-style.ts';
+import { useEffect, useRef, useState } from 'react';
 function NavBarComp() {
   const navbarRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,15 +23,15 @@ function NavBarComp() {
 
   const handleMenu = () => {
     setIsOpen(!isOpen);
+    setAnchorEl(navbarRef.current);
+    console.log('==>anchorEl', anchorEl);
   };
   const handleClose = () => {
     setIsOpen(false);
   };
-  useEffect(() => {
-    setAnchorEl(navbarRef.current);
-  }, []);
+  useEffect(() => {}, []);
   return (
-    <Box sx={{ marginBlock: '24px' }}>
+    <Box sx={{ marginBlock: '24px' }} ref={navbarRef}>
       <Grid container className="navbar">
         <Grid item xs={5} sm={5} md={2} lg={2} sx={GridLogoStyle}>
           <LogoComp logoStyle="logo" />
@@ -51,11 +51,7 @@ function NavBarComp() {
           >
             Download My CV
           </Button>
-          <IconButton
-            ref={navbarRef}
-            onClick={handleMenu}
-            sx={HamburgerMenuIconStyle}
-          >
+          <IconButton onClick={handleMenu} sx={HamburgerMenuIconStyle}>
             <MenuIcon />
           </IconButton>
         </Grid>
@@ -68,12 +64,16 @@ function NavBarComp() {
         anchorEl={anchorEl}
         anchorOrigin={{
           vertical: 'top',
-          horizontal: 'left',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
         }}
         transitionDuration={800}
         TransitionComponent={Slide}
       >
-        <Grid container sx={{ padding: '16px' }}>
+        <Grid container sx={{ padding: '16px', maxWidth: '100%' }}>
           <Grid item xs={12} sm={12} md={12} sx={PopoverGridLogoStyle}>
             <LogoComp logoStyle="logo" />
             <IconButton onClick={handleClose}>
